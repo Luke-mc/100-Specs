@@ -5,6 +5,8 @@
  *
  */
 
+ var unicorn = null;
+
 
 /* Step 2
  *
@@ -13,6 +15,8 @@
  *
  */
 
+ var videogame_system = 'Atari';
+
 
 /* Step 3
  *
@@ -20,6 +24,8 @@
  * and assign the value of sahara_animal to "The Addax"
  *
  */
+
+ var sahara_animal = 'The Addax';
 
 
 /* Step 4
@@ -30,6 +36,8 @@
  * Capitalize the names.
  */
 
+ var planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'];
+
 
 /* Step 5
  *
@@ -39,6 +47,8 @@
  *
  */
 
+ var galilean_moons = ['io', 'europa', 'ganymede', 'callisto'];
+
 
 /* Step 6 φ
  *
@@ -46,6 +56,8 @@
  * and assign the value of golden_ratio to 1.61803398874
  *
  */
+
+ var golden_ratio = 1.61803398874;
 
 
 /* Step 7
@@ -55,6 +67,8 @@
  *
  */
 
+ var earths_water_composition = 0.71;
+
 
 /* Step 8
  *
@@ -62,6 +76,8 @@
  * and assign the value of club_name to "Fight Club"
  *
  */
+
+ var club_name = "Fight Club";
 
 
 /* Step 9
@@ -73,6 +89,12 @@
  *   male    => "male"
  *   unknown => undefined
  */
+
+ var gender = {
+  female : "female",
+  male : "male",
+  unknown : undefined
+ };
 
 
 /* Step 10
@@ -86,7 +108,16 @@
  *   age     => 20
  *   gender  => gender.female
  *
+
+
  */
+
+  var princess_leia = {
+  name : "Leia Organa",
+  money : 890,
+  age : 20,
+  gender : gender.female
+ };
 
 
 /* Step 11
@@ -100,6 +131,15 @@
  *   jsonformatter.curiousconcept.com => "104.28.5.70"
  *
  */
+
+ var domains = {
+
+   "ycombinator.com" : "198.41.190.47",
+   "laughingsquid.com" : "162.159.247.97",
+   "slumlordhosting.com" : "198.61.179.126",
+   "jsonformatter.curiousconcept.com" : "104.28.5.70"
+
+ };
 
 
 /* Step 12
@@ -116,6 +156,18 @@
  *
  */
 
+var browsers = {
+
+ Chromium: "google.com",
+ Safari: "apple.com",
+ Opera: "opera.com",
+ Firefox: "mozilla.org",
+ Sleipnir: "fenrir-inc.com",
+ Konqueror: "konqueror.org"
+
+};
+
+
 
 /* Step 13
  *
@@ -123,7 +175,7 @@
  * with properties and values set to:
  *
  *  colors    => [LITERAL OBJECT]
- *                  red       => "#F0280A"
+ *              red       => "#F0280A"
  *                  orange    => "#FF8800"
  *                  yellow    => "#FFDD00"
  *                  green     => "#51AB0C"
@@ -133,6 +185,21 @@
  *  isDouble  => true
  *
  */
+
+ var rainbow = {
+   colors : {
+    red    : "#F0280A",
+    orange : "#FF8800",
+    yellow : "#FFDD00",
+    green  : "#51AB0C",
+    blue   : "#1593ED",
+    indigo : "#5215ED",
+    violet : "#A915ED"
+   },
+
+   isDouble : true
+
+ };
 
 
 /* Step 14
@@ -149,6 +216,8 @@
  *
  */
 
+ var linuxFlavors = ["Gentoo","Fedora","Debian","Slackware","Red Hat","Bieber Linux"];
+
 
 /* Step 15
  *
@@ -163,6 +232,8 @@
  *
  */
 
+ var DNA = ["nucleatides","guanine","adenine","thymine","cytosine"];
+
 
 /* Step 16
  *
@@ -176,6 +247,14 @@
  *
  */
 
+
+var laptopCosts = {
+ MacBook  : 1500,
+ Alienware: 2500,
+ HP       : 499,
+ Surface  : 320
+
+};
 
 /* Step 17
  *
@@ -192,6 +271,8 @@
  *
  */
 
+ var livingOrganismClassification = ["Kingdom","Phylum","Class","Order","Family","Genus","Species"];
+
 
 /* Step 18
  *
@@ -205,6 +286,8 @@
  * "cvs"
  *
  */
+
+ var scmList = [ "git", "svn", "mercurial", "bazaar", "cvs"];
 
 
 /* Step 19
@@ -225,6 +308,20 @@
  *
  */
 
+ var beers = {
+
+  IPA : "Ale",
+  Lager : "Strong",
+  Heffeweisen: "German",
+  Stout: ['Thick', 'Dark'],
+  Porter: "Bitter",
+  Ale: ["Light", "Golden"]
+
+
+ };
+
+
+
 
 /* Step 20
  *
@@ -234,6 +331,10 @@
  * @return {String}
  *
  */
+
+ function sahara_river(){
+    return 'Nile River';
+ }
 
 
 /* Step 21
@@ -247,6 +348,10 @@
  *
  */
 
+ function addNumbers(num1,num2){
+    return num1 += num2;
+ }
+
 
 /* Step 22
  *
@@ -259,6 +364,15 @@
  * @return {Bool}
  *
  */
+
+ function installLinux(type){
+
+    if(linuxFlavors.indexOf(type) === -1){
+      return false;
+    }else{
+      return true;
+    }
+ }
 
 
 /* Step 23
@@ -279,6 +393,31 @@
  *
  */
 
+ function drink(drinkType){
+
+  if(beers.hasOwnProperty(drinkType) === false){
+
+    return false;
+
+  }else{
+
+
+    if( Array.isArray(beers[drinkType])){
+
+      return `This ${drinkType} is ${beers[drinkType][0]} and ${beers[drinkType][1]}.`;
+
+    }else{
+
+   // console.log(`This ${drinkType} is ${beers[drinkType]}`);
+
+     return `This ${drinkType} is ${beers[drinkType]}.`;
+
+  }
+ }
+}
+
+
+
 
 /* Step 24
  *
@@ -292,6 +431,17 @@
  *
  */
 
+ function browseURL(browse){
+    if(browsers.hasOwnProperty(browse) === false){
+      return false;
+    }else{
+      return `${browsers[browse]}`;
+    }
+
+ }
+
+
+
 
 /* Step 25
  *
@@ -302,6 +452,19 @@
  * @return {String}
  *
  */
+
+ function listLivingOrgClass(){
+  var newArray = [];
+
+  for( var i = 0; i < livingOrganismClassification.length; i++){
+
+   newArray.push(`<li>${livingOrganismClassification[i]}</li></ul>`);
+  }
+
+  var joined = newArray.join('');
+
+  return `<ul> ${joined} </ul>`;
+}
 
 
 /* Step 26
@@ -323,6 +486,15 @@
  * @return {String}
  *
  */
+
+ function favoritePlanet(currPlanet){
+  if(planets.indexOf(currPlanet) === -1){
+      return `${currPlanet} is not a planet!`;
+ }else{
+  var rando = Math.floor(Math.random() * 5 + 1);
+  return `I'm from ${currPlanet}, but I wish I could go to ${planets[rando]}.`;
+ }
+}
 
 
 /* Step 27
@@ -348,6 +520,28 @@
  *
  */
 
+ class Person{
+  constructor(name,money,age,gender){
+    this.name = name;
+    this.money =  money;
+    this.age =  age;
+    this.gender= gender;
+  }
+
+
+  spendMoney(amount){
+
+     this.money -= amount;
+  }
+
+  earnMoney(amount){
+
+    this.money += amount;
+
+  }
+
+}
+
 
 /* Step 28
  *
@@ -361,6 +555,13 @@
  *
  */
 
+ function purchaseLaptop(laptop){
+  if(laptopCosts.hasOwnProperty(laptop) === false){
+      return -1;
+  }else{
+    return `${laptopCosts[laptop]}`;  }
+ }
+
 
 /* Step 29
  *
@@ -373,6 +574,14 @@
  * @return {Bool}
  *
  */
+
+ function canTalkAbout(club){
+  if(club_name === club){
+    return false;
+  }else{
+    return true;
+  }
+ }
 
 
 /* Step 30
@@ -395,6 +604,15 @@
  *   write
  *
  */
+
+ function Pen(color){
+  this.color = color;
+
+ }
+
+ Pen.prototype.write = function (string){
+  return `${this.color}: ${string}`
+ };
 
 
 /* Step 31
