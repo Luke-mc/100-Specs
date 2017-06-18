@@ -1161,6 +1161,12 @@ class Animal{
  * @param {boolean} isOpen     Whether the box is opened or closed
  */
 
+class Box{
+  constructor(contents){
+    this.isOpen = false;
+    this.contents = contents;
+  }
+}
 
 /**
  * Step 54
