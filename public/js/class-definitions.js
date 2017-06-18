@@ -611,7 +611,7 @@ var laptopCosts = {
  }
 
  Pen.prototype.write = function (string){
-  return `${this.color}: ${string}`
+  return `${this.color}: ${string}`;
  };
 
 
@@ -642,6 +642,25 @@ var laptopCosts = {
  *
  */
 
+function Garden(number){
+  this.plantsTotal = number;
+  this.isWatered = false;
+}
+
+Garden.prototype.water = function (){
+  this.isWatered = true;
+ };
+
+Garden.prototype.grow = function (){
+if(this.isWatered === false){
+  return false;
+ }else{
+  this.plantsTotal += 1;
+ }
+};
+
+
+
 
 /* Step 32
  *
@@ -659,6 +678,19 @@ var laptopCosts = {
  *   removePlanet
  *
  */
+
+ function SolarSystem(){
+  this.planets = [];
+ }
+
+SolarSystem.prototype.addPlanet = function (planet){
+  this.planets.push(planet);
+};
+
+SolarSystem.prototype.removePlanet = function (){
+  this.planets.pop();
+};
+
 
 
 /* Step 33
@@ -693,6 +725,42 @@ var laptopCosts = {
  *   marries
  *
  */
+ function PrincessLeia(name,money,age,gender){
+   this.isInTrouble = null;
+   this.name = name;
+   this.money = money;
+   this.age = age;
+   this.gender = gender;
+ }
+
+ PrincessLeia.prototype = Object.create(Person.prototype, {
+  constructor: {
+    value: Person
+  }
+});
+
+ PrincessLeia.prototype.shootsGun = function (){
+  this.isInTrouble = false;
+  return  "Leia shoots her gun wildly";
+
+};
+
+ PrincessLeia.prototype.getsInTrouble = function (){
+   this.isInTrouble = true;
+  return "Help me Obi-wan Kenobi, you're my only hope";
+
+};
+
+ PrincessLeia.prototype.marries = function (love){
+    if(love === "Han Solo"){
+      return true;
+    }
+    else if(love === "Luke Skywalker"){
+      return "Gross!";
+    }else{
+      return false;
+    }
+};
 
 
 /* Step 34
@@ -712,6 +780,20 @@ var laptopCosts = {
  *   staplePapers
  *
  */
+
+ function Stapler(color, maxPapers){
+  this.color = color;
+  this.maxPapers = maxPapers;
+ }
+
+ Stapler.prototype.staplePapers = function (num){
+  if(num <= this.maxPapers){
+    return true;
+  }else{
+      return false;
+  }
+
+};
 
 
 /* Step 35
@@ -754,6 +836,65 @@ var laptopCosts = {
  */
 
 
+function Scientist(name,money,age,gender){
+   this.name = name;
+   this.money = money;
+   this.age = age;
+   this.gender = gender;
+   this.discoveries = [];
+   this.disciplines = [];
+
+}
+
+
+Scientist.prototype = Object.create(Person.prototype, {
+  constructor: {
+    value: Person
+  }
+});
+
+Scientist.prototype.addDiscipline = function(discipline){
+  this.disciplines.push(discipline);
+
+  return this.disciplines;
+};
+
+Scientist.prototype.checkDiscipline = function (dis){
+  if(this.disciplines.indexOf(dis) === -1){
+    return false;
+  }else{
+    return true;
+  }
+
+};
+
+Scientist.prototype.addDiscovery= function (discovery){
+  this.discoveries.push(discovery);
+
+if(this.discoveries.length === 1){
+  return `I discovered ${this.discoveries[0]}.`;
+}
+else if(this.discoveries.length === 2){
+  var joined = this.discoveries.join(' and ');
+  return `I discovered ${joined}.`;
+
+}else{
+
+  var pop = this.discoveries.pop();
+  console.log(this.discoveries);
+  var join = this.discoveries.join(', ');
+  console.log(joined);
+  var rejoin = `${join}, and ${pop}`;
+
+
+  return `I discovered ${rejoin}.`;
+}
+};
+
+
+
+
+
 /* Step 36
  *
  * Define an ES5 class named "BankAccount" that has properties
@@ -774,6 +915,26 @@ var laptopCosts = {
  *   rob
  *
  */
+
+ function BankAccount(balance,owner){
+
+  this.balance = balance;
+  this.owner = owner;
+ }
+
+ BankAccount.prototype.withdraw = function(){
+ };
+
+  BankAccount.prototype.deposit = function(){
+ };
+
+
+  BankAccount.prototype.rob = function(){
+ };
+
+
+
+
 
 
 /* Step 37
@@ -948,6 +1109,12 @@ var laptopCosts = {
  * @param {string} gender  male or female
  */
 
+class Animal{
+  constructor(species,gender){
+    this.species = species;
+    this.gender = gender;
+  }
+}
 
 /**
  * Step 51
@@ -956,6 +1123,13 @@ var laptopCosts = {
  * @param {string} make The vehicle's make
  * @param {string} model The vehicle's model
  */
+
+ class Vehicle{
+  constructor(make,model){
+    this.make = make;
+    this.model = model;
+  }
+}
 
 
 /**
