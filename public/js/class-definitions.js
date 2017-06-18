@@ -1563,6 +1563,19 @@ return side;
  */
 
 
+ Meal.prototype.containsJunkFood = function(){
+
+  if(this.foods.indexOf("chips", "soda", "ice cream", "popcorn", "candy") !== -1){
+
+     return true;
+ }else{
+
+    return false;
+  }
+
+ };
+
+
  /* Steps 91 to 100
  *
  * Call methods
@@ -1576,9 +1589,9 @@ return side;
  * and assign the values to each variable below.
  *
  */
-var warmBloodedAnimal;
-var coldBloodedAnimal;
-var notWarmOrColdAnimal;
+var warmBloodedAnimal = george.isWarmBlooded('Fish');
+var coldBloodedAnimal = nemo.isWarmBlooded('Monkey');
+var notWarmOrColdAnimal = cat.isWarmBlooded('Cow');
 
 
 /* Step 92
