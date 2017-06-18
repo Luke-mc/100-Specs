@@ -1355,6 +1355,16 @@ var dinner = new Meal(['fish','vegetables']);
  *
  */
 
+ Vehicle.prototype.drive = function(streetName){
+  if((typeof streetName === 'string') && (streetName  !== "") && (streetName !== null)){
+    return `Driving on ${streetName}`;
+  }else{
+    return `Driving forward`;
+  }
+ };
+
+
+
 
  /* Step 83
  *
