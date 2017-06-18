@@ -1600,8 +1600,8 @@ var notWarmOrColdAnimal = cat.isWarmBlooded('Cow');
  * and assign the values to each variable below.
  *
  */
-var streetDriving;
-var forwardDriving;
+var streetDriving = civic.drive("nassau");
+var forwardDriving = forte.drive("");
 
 
  /* Step 93
