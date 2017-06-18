@@ -1610,8 +1610,10 @@ var forwardDriving = forte.drive("");
  * and assign the values to each variable below.
  *
  */
-var decagon;
-var polygon;
+var dec = new Shape(10);
+var decagon = dec.getType(10);
+var poly =  new Shape(11);
+var polygon = poly.getType(11);
 
 
 /* Step 94
@@ -1620,8 +1622,10 @@ var polygon;
  * and assign the values to each variable below.
  *
  */
-var openAClosedBox;
-var closeAnOpenBox;
+var boxie = new Box("clothes", false);
+var openAClosedBox = boxie.openBox();
+var boxi = new Box("clothes", true);
+var closeAnOpenBox = boxi.openBox();
 
 
  /* Step 95
@@ -1630,9 +1634,11 @@ var closeAnOpenBox;
  * and assign the values to each variable below.
  *
  */
-var openAClosedDoor;
-var closeAnOpenDoor;
 
+var doorie = new Door(false);
+var openAClosedDoor = doorie.openClose();
+var doori = new Door(true);
+var closeAnOpenDoor = doori.openClose();
 
 /* Step 96
  *
@@ -1640,8 +1646,10 @@ var closeAnOpenDoor;
  * and assign the values to each variable below.
  *
  */
-var redShoesSize7;
-var blackShoesSize10;
+
+var shoe1 = new Shoe(7, 'red');
+var redShoesSize7 = shoe1.findShoes();
+var blackShoesSize10 = dressShoes.findShoes();
 
 
  /* Step 97
@@ -1650,8 +1658,8 @@ var blackShoesSize10;
  * and assign the values to each variable below.
  *
  */
-var farTooTallAStory;
-var shortStory;
+var farTooTallAStory = twoStory.isATallStory(1);
+var shortStory = twoStory.isATallStory();
 
 
  /* Step 98
@@ -1660,8 +1668,8 @@ var shortStory;
  * and assign the values to each variable below.
  *
  */
-var kitchenLightsOn;
-var porchLightsOff;
+var kitchenLightsOn = incandescent.flipSwitch('on');
+var porchLightsOff = halogen.flipSwitch("off");
 
 
  /* Step 99
@@ -1670,8 +1678,8 @@ var porchLightsOff;
  * and assign the values to each variable below.
  *
  */
-var cookieMonsterPwns;
-var cookieMonsterBlocked;
+var cookieMonsterPwns = chocolateChip.swipedByCookieMonster("Monday");
+var cookieMonsterBlocked = gingerbread.swipedByCookieMonster("Tuesday");
 
 
  /* Step 100
@@ -1680,5 +1688,8 @@ var cookieMonsterBlocked;
  * and assign the values to each variable below.
  *
  */
-var badForYou;
-var goodForYou;
+
+var snack = new Meal(["chips","soda","candy"]);
+
+var badForYou = snack.containsJunkFood();
+var goodForYou = breakfast.containsJunkFood();
