@@ -1162,8 +1162,8 @@ class Animal{
  */
 
 class Box{
-  constructor(contents){
-    this.isOpen = false;
+  constructor(contents, position){
+    this.isOpen = position;
     this.contents = contents;
   }
 }
@@ -1270,24 +1270,25 @@ class Box{
 
 
 // Create 2 different species of animals
-var george;
-var nemo;
+var george = new Animal("Monkey", "male");
+var nemo = new Animal('Fish', 'male');
 
 // Create 2 different vehicles
-var civic;
-var forte;
+var civic = new Vehicle("Honda", "Civic");
+var forte = new Vehicle("KIA", "Forte");
 
 // Create 2 shapes with different numbers of sides
-var square;
-var hexagon;
+var square = new Shape(4);
+var hexagon = new Shape(6);
 
 // Create 2 boxes
-var catBox;
-var christmasPresent;
+var cat = new Animal('Cat','male');
+var catBox = new Box(cat, true);
+var christmasPresent = new Box("exist", false);
 
 // Create 2 doors
-var automaticDoor;
-var bankVault;
+var automaticDoor ;
+var bankVault ;
 
 // Create 2 shoes
 var rubySlippers;
