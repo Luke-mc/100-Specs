@@ -1211,6 +1211,13 @@ class Box{
  * @param {number} stories How many stories tall the house is
  */
 
+  class House{
+  constructor(num){
+    this.stories = num;
+  }
+}
+
+
 
 /**
  * Step 57
@@ -1218,6 +1225,13 @@ class Box{
  * Lightbulb class
  * @param {boolean} isOn Whether the light is on or off
  */
+
+  class Lightbulb{
+  constructor(){
+    this.isOn = false;
+  }
+}
+
 
 
 /**
@@ -1227,6 +1241,13 @@ class Box{
  * @param {string} flavor The cookie's flavor
  */
 
+  class Cookie{
+  constructor(flavor){
+    this.flavor = flavor;
+  }
+}
+
+
 
 /**
  * Step 59
@@ -1234,6 +1255,12 @@ class Box{
  * Meal class
  * @param {Array} foods All the foods in the meal
  */
+
+   class Meal{
+  constructor(arr){
+    this.foods = arr;
+  }
+}
 
 
 /**
