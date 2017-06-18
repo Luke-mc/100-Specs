@@ -1490,6 +1490,17 @@ return side;
  *
  */
 
+ House.prototype.isATallStory = function(storiesTooTall){
+
+  if(this.stories >= storiesTooTall){
+    return true;
+  }else{
+
+    return false;
+  }
+
+ };
+
 
  /* Step 88
  *
@@ -1502,6 +1513,21 @@ return side;
  */
 
 
+ Lightbulb.prototype.flipSwitch = function(on){
+
+  if( on === 'on'){
+     this.isOn = true;
+     return true;
+ }else{
+
+    return false;
+  }
+
+ };
+
+
+
+
  /* Step 89
  *
  * Declare a Cookie method called swipedByCookieMonster that accepts
@@ -1510,6 +1536,17 @@ return side;
  *
  */
 
+ Cookie.prototype.swipedByCookieMonster = function(dayOfTheWeek){
+
+  if( this.flavor === 'chocolate' && dayOfTheWeek === "Monday"){
+
+     return true;
+ }else{
+
+    return false;
+  }
+
+ };
 
  /* Step 90
  *
