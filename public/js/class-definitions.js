@@ -1384,6 +1384,43 @@ var dinner = new Meal(['fish','vegetables']);
  *
  */
 
+ Shape.prototype.getType = function(){
+  var side = this.sides;
+  switch(side){
+    case 3:
+      side = "triangle";
+    break;
+    case 4:
+      side = "quadrilateral";
+    break;
+    case 5:
+      side = "pentagon";
+    break;
+    case 6:
+      side = "hexagon";
+    break;
+    case 7:
+      side = "heptagon";
+    break;
+    case 8:
+      side = "octagon";
+    break;
+    case 9:
+      side = "nonagon";
+    break;
+    case 10:
+      side = "decagon";
+    break;
+    default:
+      side = "Could not determine type";
+  }
+
+return side;
+
+ };
+
+
+
 
 /* Step 84
  *
@@ -1394,6 +1431,18 @@ var dinner = new Meal(['fish','vegetables']);
  *
  */
 
+ Box.prototype.openBox = function(){
+
+  if(this.isOpen === false){
+    this.isOpen = true;
+    return true;
+  }else{
+    this.isOpen = true;
+    return false;
+  }
+
+ };
+
 
  /* Step 85
  *
@@ -1403,6 +1452,20 @@ var dinner = new Meal(['fish','vegetables']);
  *
  */
 
+ Door.prototype.openClose = function(){
+
+  if(this.isOpen === false){
+    this.isOpen = true;
+    return true;
+  }else{
+    this.isOpen = false;
+    return false;
+  }
+
+ };
+
+
+
 
 /* Step 86
  *
@@ -1410,6 +1473,12 @@ var dinner = new Meal(['fish','vegetables']);
  * the color and size of the shoe ("Found red shoes of size 7").
  *
  */
+
+ Shoe.prototype.findShoes = function(){
+
+  return `Found ${this.color} shoes of size ${this.size}`;
+
+ };
 
 
  /* Step 87
